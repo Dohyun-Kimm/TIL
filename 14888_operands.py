@@ -28,9 +28,10 @@ def dfs(idx, ops, r):
             # r =calcul(r,nums[idx],ops[i])
             # print(f'{r=} {ops[i]=}')
             print(f'brefore calcul:{r=}')
-            r =calcul(r,nums[idx],i )
+
             print(f'{opp=} {r=}')
-            dfs(idx+1,opp,r )
+            dfs(idx+1,opp,calcul(r,nums[idx],i ) )
+            opp[i] +=1
     print()
 
 
