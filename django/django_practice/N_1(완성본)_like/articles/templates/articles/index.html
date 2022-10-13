@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Articles</h1>
+  <a href="{% url 'articles:create' %}">create</a>
+  <hr>
+  {% for article in articles %}
+    <p>글 번호 : {{ article.pk }}</p>
+    <p>작성자 : {{ article.user }}</p>
+    <p>제목 : {{ article.title }}</p>
+    <p>내용 : {{ article.content }}</p>
+
+    {% comment %} 좋아요만들기 {% endcomment %}
+    
+    <form action="{% url 'articles:likes' article.pk %}" method="POST">
+      {% csrf_token %}
+      {% if request.user in article.like_users.all %}
+      
+        <button type='submit' style="border: none; background-color: transparent;" >
+          <i class="fa-solid fa-heart"></i>
+        </button>
+      {% else %}
+      <button type='submit' style="border: none; background-color: transparent;" >
+        <i class="fa-regular fa-heart"></i>
+      </button>
+      {% endif %}
+    </form>    
+
+    
+
+    <a href="{% url 'articles:detail' article.pk %}">상세 페이지</a>
+    <hr>
+  {% endfor %}
+{% endblock content %}
