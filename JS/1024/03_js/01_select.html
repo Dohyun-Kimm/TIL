@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="title">DOM 조작</h1>
+  <!-- element 하나 선택 -->
+  <p class="text">querySelector</p>
+  <!-- 전체 선택, 배열 반환 -->
+  <p class="text">querySelectorAll</p>
+  <ul>
+    <li>Javascript</li>
+    <li>Python</li>
+  </ul>
+
+  <script>
+    // id선택자를 통해 접근
+    console.log(document.querySelector('#title'))
+    // 클래스를 통해 접근
+    console.log(document.querySelectorAll('.text'))
+    //  첫번째 것 반환.
+    console.log(document.querySelector('.text'))
+    console.log(document.querySelectorAll('ul > li'))
+
+    // nodelistt - ㅈ
+    liTags = document.querySelectorAll('body > ul > li')
+    liTags.forEach(element =>{
+      console.log(element)
+    })
+    // mdn nodelist
+
+
+    // 매소드 조작
+    //  document.crateElement / 
+    //   
+    </script>
+</body>
+</html>

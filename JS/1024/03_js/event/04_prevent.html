@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <h1>정말 중요한 내용</h1>
+  </div>
+  
+  <script>
+    // html 기본 동작들이 불필요한 경우가 있음.
+
+
+    // 복사하지 못하게 만들기
+    const h1Tag = document.querySelector('h1')
+    h1Tag.addEventListener('copy',function(event){
+      // copy가 들어왔을떄 prevent하게됨
+      event.preventDefault()
+      alert('복사 할 수 없습니다.')
+    })
+  </script>
+</body>
+</html>

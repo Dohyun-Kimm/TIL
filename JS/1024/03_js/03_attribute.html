@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .red { 
+      color: red;
+    }
+    .blue {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="red">안녕하세요</h1>
+  <div></div>
+
+  <script>
+    /*
+     조작 관련 method 
+     `element.getAttribute` ,
+      `element.setAttribute` : 속성이 이미 있으면 갱신, 존재 하지않으면 새로 생성
+
+    */
+    // 생성
+    const aTag= document.createElement('a')
+    // 속성 추가
+    aTag.setAttribute('href','www.google.com')
+    // 태그안에 텍스트 넣기
+    aTag.innerText='구글'
+    const divTag = document.querySelector('div')
+    divTag.appendChild(aTag)
+    
+    
+    h1Tag = document.querySelector('h1')
+    h1Tag.classList.toggle('blue')
+
+  </script>
+</body>
+</html>
