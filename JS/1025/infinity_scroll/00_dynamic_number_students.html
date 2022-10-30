@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        margin-left: 5px;
+        margin-top: 15px;
+      }
+
+      .red {
+        background-color: #de2837;
+      }
+
+      .green {
+        background-color: #3ad647;
+      }
+
+      .blue {
+        background-color: #3a5cd6;
+      }
+    </style>
+  </head>
+  <body>
+    <div id=number>0</div>
+    <button id="minus">-</button>
+    <button id="plus">+</button>
+    <div>
+      <p>black</p>
+      <div class="red box">red</div>
+      <div class="green box">green</div>
+      <div class="blue box">blue</div>
+
+    </div>
+    <script>
+      // 코드 작성
+      let number = document.querySelector('#number')
+      const minusBtn = document.querySelector('#minus')
+      const plusBtn = document.querySelector('#plus')
+
+      // let currentColor = document.querySelector('p')
+
+      // console.log(number);
+      // 함수 만들기
+      minusBtn.addEventListener('click', function(){
+        // number.innerText = parseInt(number.innerText) - 1
+        number.innerText --
+      })
+      plusBtn.addEventListener('click', function(){
+        // number.innerText = parseInt(number.innerText) - 1
+        number.innerText ++
+      })
+
+      chageColor = function(color){
+        const currentColor = document.querySelector('.current-color')
+        currentColor.innerText = color
+        currentColor.style.color = color
+      }
+
+      document.querySelector('.red')
+        .addEventListener('mouseover', function(){
+          // number에, 스타일넣기, 색깔
+          number.style.color = '#de2837'
+          currentColor.innerText = 'red'
+          // 적용해보기
+          chageColor()
+          
+        })
+        document.querySelector('.blue')
+        .addEventListener('mouseover', function(){
+          // number에, 스타일넣기, 색깔
+          number.style.color = '#3a5cd6'   
+          currentColor.innerText = 'blue'
+          currentColor.style.color = '#3a5cd6'
+
+        })
+        document.querySelector('.green')
+        .addEventListener('mouseover', function(){
+          // number에, 스타일넣기, 색깔
+          number.style.color = '#3ad647'   
+          currentColor.innerText = 'green'
+          currentColor.style.color = '#3ad647'   
+        })
+        
+    </script>
+  </body>
+</html>
