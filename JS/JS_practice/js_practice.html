@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //switch
+    const name = '김도현'
+    switch (name){
+      case '김도현':{
+        console.log('my name');
+        
+      }
+      case 'messi':{
+        console.log('not my name');
+        
+      }
+      default:{
+        console.log('print this line anywy');
+      }
+    }
+    //for ... in
+    const fruits = {a : 'apple', b:'banna'}
+    for ( const key in fruits){
+      console.log(key);
+      console.log(fruits[key]);
+    }
+
+    const sports = ['football', 'baseball', 'basketball']
+    for (const el of sports){
+      console.log(el);
+    }
+    // 함수 기본인자 선언
+    const greeting =function (name='Anonymous'){
+      return `HI ${name}`
+    }
+    console.log( greeting())
+    // 전ㄱ개구문
+    let parts = ['shoulder','knees']
+    let lyrics = ['head', ...parts, 'and', 'toes']
+    console.log(lyrics);
+    // 함수와 사용
+    function func(a ,b, ...part){
+      return ([a,b,part])
+    }
+    console.log(func(1,2,3,4,5));
+  </script>
+</body>
+</html>
